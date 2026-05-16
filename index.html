@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ServiceStelle | Soluciones para la Industria Alimentaria y Cárnica</title>
+    <title>ServiceStelle | Soluciones Integrales para la Industria Alimentaria</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2 family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -16,10 +16,9 @@
                 extend: {
                     colors: {
                         brandRed: '#e30613',
-                        brandDark: '#0a0b0d',
-                        brandMedium: '#14161b',
+                        brandDark: '#0e1013',
                         brandSteel: '#e2e8f0',
-                        brandGold: '#ffc107',
+                        brandGold: '#f59e0b',
                     },
                     fontFamily: {
                         sans: ['Space Grotesk', 'sans-serif'],
@@ -30,403 +29,191 @@
         }
     </script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .industrial-radial {
-            background: radial-gradient(circle at 50% 50%, #1e222b 0%, #0a0b0d 100%);
-        }
-        .steel-border {
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .steel-border:hover {
-            border: 1px solid rgba(227, 6, 19, 0.3);
-        }
-        /* Rotaciones de engranajes optimizadas para el nuevo logo vectorizado */
-        .gear-top-spin {
-            animation: spinGear 10s linear infinite;
-            transform-origin: 30px 24px;
-        }
-        .gear-bottom-spin {
-            animation: spinGearRev 7s linear infinite;
-            transform-origin: 30px 48px;
-        }
-        @keyframes spinGear {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes spinGearRev {
-            0% { transform: rotate(360deg); }
-            100% { transform: rotate(0deg); }
-        }
-        @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            animation: marquee 25s linear infinite;
-        }
+        html { scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, rgba(14, 16, 19, 0.95) 40%, rgba(227, 6, 19, 0.15) 100%); }
+        .text-glow { text-shadow: 0 0 15px rgba(227, 6, 19, 0.4); }
+        
+        /* Animaciones para el logo corregido */
+        .gear-rotation-black { animation: spin 15s linear infinite; }
+        .gear-rotation-red { animation: spin-reverse 10s linear infinite; }
+        
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes spin-reverse { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+        
+        .card-shadow { box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-shadow:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -15px rgba(227, 6, 19, 0.2); }
     </style>
 </head>
-<body class="bg-brandDark text-gray-200 font-sans antialiased">
+<body class="bg-[#0e1013] text-gray-200 font-sans antialiased pt-20">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-brandDark/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header class="fixed top-0 left-0 w-full z-50 bg-brandDark/90 backdrop-blur-md border-b border-white/5 h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
             
-            <a href="#" class="flex items-center space-x-2 group">
-                <div class="w-48 h-16 flex items-center justify-center">
-                    <svg viewBox="0 0 180 65" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 52 14 A 23 23 0 0 1 82 56" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="2 2" />
-                        <path d="M 58 52 A 25 25 0 0 1 24 18" fill="none" stroke="#000000" stroke-width="1" stroke-opacity="0.3" />
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-44 h-16 flex items-center justify-center p-1">
+                    <svg viewBox="0 0 180 70" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 15 15 A 35 35 0 0 1 110 55" fill="none" stroke="#ffffff" stroke-width="0.75" stroke-opacity="0.15" stroke-dasharray="2 2" />
+                        <path d="M 120 50 A 40 40 0 0 1 20 20" fill="none" stroke="#000000" stroke-width="0.75" stroke-opacity="0.2" />
                         
-                        <g id="logo-gears">
-                            <path d="M 28 10 C 38 10, 42 18, 42 24 C 42 36, 18 36, 18 48 C 18 56, 26 58, 34 58 C 38 58, 41 56, 43 53" fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round"/>
-                            
-                            <g class="gear-top-spin">
-                                <circle cx="30"  cy="24" r="8" fill="#1a1a1a" />
-                                <circle cx="30"  cy="24" r="3" fill="#8c8c8c" />
-                                <path d="M 30 14 L 30 34 M 20 24 L 40 24 M 23 17 L 37 31 M 23 31 L 37 17" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" />
+                        <g transform="translate(10,5)">
+                            <path d="M 32 12 C 40 12, 44 18, 44 24 C 44 32, 28 36, 16 40 C 6 44, 4 54, 12 58 C 18 61, 28 60, 36 56" fill="none" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
+                            <g class="gear-rotation-black" transform="origin: 32px 24px">
+                                <circle cx="32" cy="24" r="8" fill="#1a1a1a" />
+                                <circle cx="32" cy="24" r="3" fill="#666666" />
+                                <path d="M 32 14 L 32 34 M 22 24 L 42 24 M 25 17 L 39 31 M 25 31 L 39 17" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" />
                             </g>
                             
-                            <path d="M 40 22 C 38 14, 28 14, 26 22 C 24 32, 44 32, 42 46 C 41 52, 34 54, 28 53" fill="none" stroke="#e30613" stroke-width="5" stroke-linecap="round"/>
-                            
-                            <g class="gear-bottom-spin">
-                                <circle cx="30" cy="48" r="10" fill="#e30613" />
-                                <circle cx="30" cy="48" r="3.5" fill="#e2e8f0" />
-                                <path d="M 30 36 L 30 60 M 18 48 L 42 48 M 21 39 L 39 57 M 21 57 L 39 39" stroke="#e30613" stroke-width="3" stroke-linecap="round" />
+                            <path d="M 36 12 C 28 12, 24 18, 24 24 C 24 32, 40 36, 52 40 C 62 44, 64 54, 56 58 C 50 61, 40 60, 32 56" fill="none" stroke="#e30613" stroke-width="6" stroke-linecap="round"/>
+                            <g class="gear-rotation-red" transform="origin: 36px 40px">
+                                <circle cx="36" cy="40" r="10" fill="#e30613" />
+                                <circle cx="36" cy="40" r="3.5" fill="#e2e8f0" />
+                                <path d="M 36 28 L 36 52 M 24 40 L 48 40 M 27 31 L 45 49 M 27 49 L 45 31" stroke="#e30613" stroke-width="3" stroke-linecap="round" />
                             </g>
                         </g>
                         
-                        <text x="54" y="31" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff" letter-spacing="-0.5">service</text>
-                        <text x="54" y="55" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="0.5">telle <tspan fill="#e30613" font-weight="900">!</tspan></text>
+                        <text x="62" y="31" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff" letter-spacing="-0.5">service</text>
+                        <text x="62" y="55" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="0.5">telle <tspan fill="#e30613" font-weight="900">!</tspan></text>
                     </svg>
                 </div>
             </a>
 
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#inicio" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">Inicio</a>
-                <a href="#nosotros" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">Nosotros</a>
-                <a href="#soluciones" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">Portafolio</a>
-                <a href="#mecanizado" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">CNC Haas</a>
-                <a href="#cotizador" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">Cotizar</a>
+                <a href="#soluciones" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">Servicios</a>
+                <a href="#mecanizado" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">Mecanizado CNC</a>
+                <a href="#cotizador" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">Cotizar Piezas</a>
+                <a href="#contacto" class="text-gray-300 hover:text-brandRed font-semibold text-sm tracking-wide uppercase transition-colors">Contacto</a>
             </nav>
 
             <div class="hidden lg:block">
-                <a href="tel:+573246820723" class="bg-white/5 hover:bg-brandRed text-white font-bold py-2.5 px-6 rounded-md border border-white/10 hover:border-brandRed transition-all duration-300 text-sm flex items-center space-x-2">
-                    <i class="fa-solid fa-phone-volume text-brandRed"></i> <span>Atención Técnica</span>
+                <a href="tel:+573246820723" class="bg-white/10 hover:bg-white/20 text-white font-bold py-2.5 px-5 rounded-full border border-white/20 transition-all text-sm">
+                    <i class="fa-solid fa-phone-volume mr-2 text-brandRed"></i> Soporte de Planta
                 </a>
             </div>
 
-            <button onclick="toggleMobileMenu()" class="md:hidden text-white hover:text-brandRed focus:outline-none transition-colors">
+            <button onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none hover:text-brandRed transition-colors">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-brandDark border-t border-white/5 px-4 py-6 space-y-4">
             <a href="#inicio" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">Inicio</a>
-            <a href="#nosotros" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">Nosotros</a>
-            <a href="#soluciones" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">Portafolio</a>
-            <a href="#mecanizado" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">CNC Haas</a>
-            <a href="#cotizador" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">Cotizar</a>
-            <div class="pt-4 border-t border-white/10">
-                <p class="text-xs text-gray-500 mb-2">Contacto Directo</p>
-                <p class="text-sm font-bold text-white"><i class="fa-solid fa-phone text-brandRed mr-2"></i> +57 324 682 0723</p>
-                <p class="text-sm font-bold text-white mt-1"><i class="fa-solid fa-phone text-brandRed mr-2"></i> +57 317 300 4202</p>
-            </div>
+            <a href="#soluciones" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">Servicios</a>
+            <a href="#mecanizado" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">Mecanizado CNC</a>
+            <a href="#cotizador" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">Cotizar Piezas</a>
+            <a href="#contacto" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-brandRed font-bold text-lg">Contacto</a>
         </div>
     </header>
 
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden industrial-radial">
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#20242e_1px,transparent_1px),linear-gradient(to_bottom,#20242e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
-
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 grid lg:grid-cols-12 gap-12 items-center">
+    <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center hero-gradient pt-16 overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
                 <div class="inline-flex items-center space-x-2 bg-brandRed/10 border border-brandRed/30 px-4 py-1.5 rounded-full">
                     <span class="w-2.5 h-2.5 rounded-full bg-brandRed animate-pulse"></span>
-                    <span class="text-xs font-bold text-brandRed uppercase tracking-wider">Líderes en Colombia y toda América</span>
+                    <span class="text-xs font-bold text-brandRed uppercase tracking-wider">Desde 2009 en Colombia y toda América</span>
                 </div>
-                
-                <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-none uppercase tracking-tight">
-                    Desde 2009 impulsamos la <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandRed to-red-500">industria alimentaria</span> y cárnica
-                </h1>
-                
-                <p class="text-gray-400 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 font-light">
-                    Maquinaria nueva y remanufacturada, repuestos de alta precisión, servicio técnico calificado y soluciones de ingeniería a la medida de su planta.
-                </p>
-
+                <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight uppercase text-glow"> Soluciones Cárdicas y Alimentarias </h1>
+                <p class="text-gray-400 text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 font-light"> Ingeniería de precisión, maquinaria nueva y remanufacturada (RefurbPro), y un taller mecánico CNC Haas vf4 dedicado para el sector cárnico. </p>
                 <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                    <a href="#soluciones" class="bg-brandRed hover:bg-red-700 text-white font-extrabold px-8 py-4 rounded-md text-center uppercase tracking-wide transition-all duration-300 flex items-center justify-center shadow-lg shadow-brandRed/20">
-                        Ver Portafolio <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
-                    </a>
-                    <a href="https://wa.me/573246820723?text=Hola!%20Deseo%20solicitar%20asesor%C3%ADa%20acerca%20de%20los%20servicios%20de%20mantenimiento%20y%20venta%20de%20repuestos." target="_blank" class="bg-white/5 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-md border border-white/10 text-center uppercase tracking-wide transition-all duration-300 flex items-center justify-center">
-                        <i class="fa-brands fa-whatsapp mr-2 text-brandRed text-lg"></i> Contactar Ventas
-                    </a>
-                </div>
-
-                <div class="pt-8 border-t border-white/5 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto lg:mx-0">
-                    <div>
-                        <p class="text-brandRed text-3xl font-extrabold">15+</p>
-                        <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Años Trayectoria</p>
-                    </div>
-                    <div>
-                        <p class="text-white text-3xl font-extrabold">Haas</p>
-                        <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Tecnología CNC</p>
-                    </div>
-                    <div>
-                        <p class="text-white text-3xl font-extrabold">Inox</p>
-                        <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Acero Grado 304/316</p>
-                    </div>
-                    <div>
-                        <p class="text-brandRed text-3xl font-extrabold">H1</p>
-                        <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Lubricantes H1</p>
-                    </div>
+                    <a href="#soluciones" class="bg-brandRed hover:bg-red-700 text-white font-extrabold px-8 py-4 rounded-lg text-center uppercase tracking-wide transition-all hover:shadow-lg hover:shadow-brandRed/30 flex items-center justify-center"> Ver Catálogo <i class="fa-solid fa-angle-right ml-2"></i> </a>
+                    <a href="https://wa.me/573246820723?text=Hola,%20quisiera%20solicitar%20asesoría%20acerca%20de%20los%20servicios%20y%20repuestos%20de%20precisión%20de%20ServiceStelle." target="_blank" class="bg-white/5 hover:bg-white/10 text-white font-bold px-8 py-4 rounded-lg border border-white/10 text-center uppercase tracking-wide transition-all flex items-center justify-center"> <i class="fa-brands fa-whatsapp mr-2 text-brandRed"></i> Consultar Ahora </a>
                 </div>
             </div>
-
             <div class="lg:col-span-5 relative flex justify-center">
-                <div class="relative w-full max-w-[420px] aspect-square rounded-2xl overflow-hidden border border-white/10 bg-brandMedium p-4 shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brandDark/90 via-transparent to-transparent z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Ingeniería Mecánica Alimentaria" class="w-full h-full object-cover rounded-xl opacity-75">
-                    <div class="absolute bottom-6 left-6 right-6 z-20 bg-brandDark/95 backdrop-blur-md p-5 rounded-lg border border-white/5">
-                        <p class="text-xs text-brandRed uppercase font-bold tracking-widest">Inocuidad y Precisión</p>
-                        <h3 class="text-white font-bold text-lg">Especialistas en el Sector Cárnico</h3>
-                    </div>
+                <div class="relative w-full max-w-[420px] aspect-square rounded-2xl overflow-hidden border border-white/10 bg-brandDark p-4 shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800" alt="Planta de Producción Cárnica CNC Haas" class="w-full h-full object-cover rounded-xl opacity-80">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-brandRed py-5 overflow-hidden">
-        <div class="flex whitespace-nowrap space-x-12 uppercase font-black text-white text-xs sm:text-sm tracking-widest">
-            <div class="inline-flex space-x-12 animate-marquee">
-                <span>⚙️ Venta de Maquinaria Nueva y Remanufacturada RefurbPro</span>
-                <span>🛠️ Venta de Repuestos Nacionales e Importados (Línea Handtmann)</span>
-                <span>🔧 Servicio Técnico Especializado e Instalaciones</span>
-                <span>🤖 Automatización de Maquinaria Industrial</span>
-                <span>📐 Desarrollo y Fabricación a Medida con Tecnología CNC</span>
-                <span>⚙️ Venta de Maquinaria Nueva y Remanufacturada RefurbPro</span>
-                <span>🛠️ Venta de Repuestos Nacionales e Importados (Línea Handtmann)</span>
-                <span>🔧 Servicio Técnico Especializado e Instalaciones</span>
-                <span>🤖 Automatización de Maquinaria Industrial</span>
-                <span>📐 Desarrollo y Fabricación a Medida con Tecnología CNC</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="nosotros" class="py-24 bg-brandMedium relative border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5">
-                    <div class="aspect-[4/5] rounded-xl overflow-hidden border border-white/10 shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5f63a167?auto=format&fit=crop&q=80&w=800" alt="Planta de Producción Industrial" class="w-full h-full object-cover opacity-80">
-                    </div>
-                </div>
-
-                <div class="lg:col-span-7 space-y-6">
-                    <p class="text-brandRed uppercase font-bold tracking-widest text-sm">¿Quiénes Somos?</p>
-                    <h2 class="font-montserrat font-extrabold text-3xl sm:text-4xl text-white uppercase leading-tight">
-                        Comprometidos con la continuidad de su planta
-                    </h2>
-                    <div class="w-20 h-1 bg-brandRed"></div>
-                    <p class="text-gray-400">
-                        En <strong>ServiceStelle</strong> entendemos que en la industria cárnica y alimentaria cada minuto de inactividad cuesta dinero. Por eso, hemos estructura un equipo de respuesta rápida y un taller de mecanizado propio para responder ante cualquier requerimiento.
-                    </p>
-                    <p class="text-gray-400">
-                        Diseñamos y fabricamos repuestos de alta precisión con tecnología <strong>CNC HAAS</strong>, asegurando una exactitud idéntica a las piezas originales. Atendemos requerimientos críticos de plantas en toda Colombia y América Latina.
-                    </p>
-                    <div class="pt-4 border-t border-white/5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-solid fa-check-double text-brandRed text-xl"></i>
-                            <span class="text-sm font-semibold text-white">Cumplimiento de normas sanitarias</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-solid fa-check-double text-brandRed text-xl"></i>
-                            <span class="text-sm font-semibold text-white">Uso de aceros certificados</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="soluciones" class="py-24 bg-[#0a0b0d] relative">
+    <section id="soluciones" class="py-24 bg-gradient-to-b from-brandDark to-[#121419] relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <p class="text-brandRed uppercase font-bold tracking-widest text-sm font-montserrat">Portafolio Integral</p>
-                <h2 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white uppercase leading-none">
-                    Soluciones a su Medida
-                </h2>
+                <p class="text-brandRed uppercase font-extrabold tracking-widest text-sm">Nuestro Portafolio Especializado</p>
+                <h2 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white uppercase"> Soluciones en Acero Inoxidable </h2>
                 <div class="w-20 h-1 bg-brandRed mx-auto"></div>
-                <p class="text-gray-400">
-                    Ofrecemos las mejores alternativas y resultados en mantenimiento, venta de maquinaria y fabricación de piezas especiales.
-                </p>
+                <p class="text-gray-400"> Desde mecanizados de alta tecnología CNC Haas hasta automatización industrial grado alimenticio. </p>
             </div>
-
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-brandMedium border border-white/5 rounded-xl overflow-hidden card-shadow">
+                <div class="card bg-brandDark border border-white/5 rounded-xl overflow-hidden card-shadow">
                     <div class="h-56 relative overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&q=80&w=600" alt="Venta de Maquinaria Nueva y Usada" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-85">
+                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&q=80&w=600" alt="Venta de Maquinaria RefurbPro" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-90">
                         <span class="absolute top-4 left-4 z-20 bg-brandRed text-white font-extrabold text-xs px-3 py-1 uppercase rounded tracking-wider">Maquinaria</span>
                     </div>
                     <div class="p-8 space-y-4">
-                        <div class="flex items-center space-x-3 text-brandRed">
-                            <i class="fa-solid fa-truck-moving text-2xl"></i>
-                            <h3 class="font-montserrat font-bold text-xl text-white uppercase">Venta Maquinaria</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Venta de maquinaria nueva y remanufacturada (RefurbPro) para el procesamiento de carne y embutidos: mezcladoras, embutidoras y cutters.
-                        </p>
+                        <div class="flex items-center space-x-3 text-brandRed"> <i class="fa-solid fa-truck-moving text-2xl"></i> <h3 class="font-montserrat font-bold text-xl text-white uppercase">Nueva & RefurbPro</h3> </div>
+                        <p class="text-gray-400 text-sm"> Venta y restauración integral de maquinaria cárnica (RefurbPro). Mezcladoras, embutidoras y cutters restaurados a condición de fábrica. </p>
                     </div>
                 </div>
-
-                <div class="bg-brandMedium border border-white/5 rounded-xl overflow-hidden card-shadow">
+                <div class="card bg-brandDark border border-white/5 rounded-xl overflow-hidden card-shadow">
                     <div class="h-56 relative overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600" alt="Automatización Industrial" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-85">
-                        <span class="absolute top-4 left-4 z-20 bg-brandRed text-white font-extrabold text-xs px-3 py-1 uppercase rounded tracking-wider">Automatización</span>
-                    </div>
-                    <div class="p-8 space-y-4">
-                        <div class="flex items-center space-x-3 text-brandRed">
-                            <i class="fa-solid fa-microchip text-2xl"></i>
-                            <h3 class="font-montserrat font-bold text-xl text-white uppercase">Actualización</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Modernización tecnológica de maquinaria industrial antigua, automatización de sistemas PLC y diseño de tableros eléctricos de fuerza y control.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-brandMedium border border-white/5 rounded-xl overflow-hidden card-shadow">
-                    <div class="h-56 relative overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=600" alt="Venta de Repuestos" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-85">
+                        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=600" alt="Repuestos Nacionales e Importados" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-90">
                         <span class="absolute top-4 left-4 z-20 bg-brandRed text-white font-extrabold text-xs px-3 py-1 uppercase rounded tracking-wider">Repuestos</span>
                     </div>
                     <div class="p-8 space-y-4">
-                        <div class="flex items-center space-x-3 text-brandRed">
-                            <i class="fa-solid fa-puzzle-piece text-2xl"></i>
-                            <h3 class="font-montserrat font-bold text-xl text-white uppercase">Repuestos</h3>
-                        </div>
-                        <p class="text-gray-400 text-sm">
-                            Venta de repuestos nacionales e importados de excelente calidad. Diseñamos moldes, rotores y paletas a medida a partir de muestras físicas.
-                        </p>
+                        <div class="flex items-center space-x-3 text-brandRed"> <i class="fa-solid fa-puzzle-piece text-2xl"></i> <h3 class="font-montserrat font-bold text-xl text-white uppercase">Suministro Especializado</h3> </div>
+                        <p class="text-gray-400 text-sm"> Amplio catálogo de repuestos nacionales e importados. Especialistas en piezas críticas para embutidoras **Handtmann**. </p>
+                    </div>
+                </div>
+                <div class="card bg-brandDark border border-white/5 rounded-xl overflow-hidden card-shadow">
+                    <div class="h-56 relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=600" alt="Mantenimiento Industrial Cárnico" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-90">
+                        <span class="absolute top-4 left-4 z-20 bg-brandRed text-white font-extrabold text-xs px-3 py-1 uppercase rounded tracking-wider">Servicio</span>
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <div class="flex items-center space-x-3 text-brandRed"> <i class="fa-solid fa-screwdriver-wrench text-2xl"></i> <h3 class="font-montserrat font-bold text-xl text-white uppercase">Técnico & Instalación</h3> </div>
+                        <p class="text-gray-400 text-sm"> Mantenimiento preventivo y correctivo certificado. Automatización de líneas de producción grado alimenticio y actualización tecnológica. </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="mecanizado" class="py-24 bg-brandMedium relative border-t border-b border-white/5">
+    <section id="mecanizado" class="py-24 bg-[#0a0a0c] relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-8">
-                    <p class="text-brandRed uppercase font-bold tracking-widest text-sm">Tecnología CNC HAAS (TL2 y VF4)</p>
-                    <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white uppercase leading-tight">
-                        Fabricación de Repuestos de Alta Precisión
-                    </h2>
+                <div class="lg:col-span-6 space-y-8">
+                    <p class="text-brandRed uppercase font-extrabold tracking-widest text-sm">Mecanizado Haas de Alta Tecnología</p>
+                    <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white uppercase leading-tight"> Piezas Cilíndricas y Moldes de Precisión </h2>
                     <div class="w-20 h-1 bg-brandRed"></div>
-                    <p class="text-gray-400 text-base">
-                        Diseñamos y fabricamos componentes mecánicos bajo los más estrictos estándares de calidad técnica, logrando piezas con tolerancias impecables compatibles con marcas como <strong>Handtmann</strong>.
-                    </p>
-
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div class="bg-brandDark/50 p-4 rounded-lg border border-white/5 flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-brandRed mt-1"></i>
-                            <div>
-                                <h4 class="text-white font-bold text-sm uppercase">Piezas Cilíndricas</h4>
-                                <p class="text-xs text-gray-500 mt-1">Ejes lisos, escalonados, estriados, pernos, espárragos, casquillos, bujes, pasadores y pivotes.</p>
-                            </div>
-                        </div>
-                        <div class="bg-brandDark/50 p-4 rounded-lg border border-white/5 flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-brandRed mt-1"></i>
-                            <div>
-                                <h4 class="text-white font-bold text-sm uppercase">Termoformado</h4>
-                                <p class="text-xs text-gray-500 mt-1">Contamos con capacidad interna para diseño y fabricación de moldes de termoformado.</p>
-                            </div>
-                        </div>
-                        <div class="bg-brandDark/50 p-4 rounded-lg border border-white/5 flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-brandRed mt-1"></i>
-                            <div>
-                                <h4 class="text-white font-bold text-sm uppercase">Rotóres y Paletas</h4>
-                                <p class="text-xs text-gray-500 mt-1">Fabricamos paletas para rotóres a medida para bombas de vacío y compresores rotativos.</p>
-                            </div>
-                        </div>
-                        <div class="bg-brandDark/50 p-4 rounded-lg border border-white/5 flex items-start space-x-3">
-                            <i class="fa-solid fa-circle-check text-brandRed mt-1"></i>
-                            <div>
-                                <h4 class="text-white font-bold text-sm uppercase">Línea Handtmann</h4>
-                                <p class="text-xs text-gray-500 mt-1">Fabricación y mecanizado de piezas especiales de alta resistencia al desgaste.</p>
-                            </div>
-                        </div>
+                    <p class="text-gray-400"> Fabricamos repuestos con tolerancias de micrómetros bajo normas HACCP utilizando tecnología CNC Haas vf4, garantizando calidad idéntica a los originales. </p>
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4">
+                        <div class="bg-brandDark/40 p-4 rounded-lg border border-white/5 flex items-start space-x-3"> <i class="fa-solid fa-circle-check text-brandRed mt-1"></i> <div> <h4 class="text-white font-bold text-sm uppercase">Repuestos Handtmann</h4> <p class="text-xs text-gray-500 mt-1">Piezas especiales y mecánicas para líneas de embutición.</p> </div> </div>
+                        <div class="bg-brandDark/40 p-4 rounded-lg border border-white/5 flex items-start space-x-3"> <i class="fa-solid fa-circle-check text-brandRed mt-1"></i> <div> <h4 class="text-white font-bold text-sm uppercase">Moldes y Paletas</h4> <p class="text-xs text-gray-500 mt-1">Moldes de termoformado, rotores y paletas a medida.</p> </div> </div>
                     </div>
                 </div>
-
-                <div class="lg:col-span-5">
-                    <div class="aspect-square rounded-xl overflow-hidden border border-white/10 shadow-2xl relative">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800" alt="Mecanizados CNC" class="w-full h-full object-cover">
-                        <div class="absolute bottom-4 left-4 right-4 bg-brandDark/95 backdrop-blur-md p-4 rounded border border-white/10">
-                            <span class="text-xs text-brandRed font-bold uppercase tracking-wider">Alta Tecnología Haas</span>
-                            <h4 class="text-white font-bold text-sm">Garantía de Repetición y Tolerancia Cero</h4>
-                        </div>
+                <div class="lg:col-span-6 relative">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=800" alt="Mecanizado Haas CNC vf4" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cotizador" class="py-24 bg-[#0a0b0d] relative">
+    <section id="cotizador" class="py-24 bg-gradient-to-b from-[#0a0a0c] to-brandDark relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            <div class="bg-brandMedium border border-white/10 rounded-2xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-brandRed/5 rounded-full blur-3xl"></div>
-                
+            <div class="bg-brandDark border border-white/10 rounded-2xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brandRed/10 rounded-full blur-3xl"></div>
                 <div class="text-center space-y-4 mb-10">
-                    <p class="text-brandRed font-bold uppercase text-xs tracking-widest">Atención en Minutos</p>
-                    <h2 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase">Cotice su Pieza en Línea</h2>
-                    <p class="text-sm text-gray-400">Seleccione el servicio o componente que requiere y genere la solicitud directa a nuestro equipo por WhatsApp.</p>
+                    <p class="text-brandRed font-bold uppercase text-xs tracking-widest">Asesoría de Ingeniería Cárdica</p>
+                    <h2 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase">Cotice su Requerimiento</h2>
+                    <p class="text-sm text-gray-400">Seleccione el servicio o componente que requiere y envíe los datos directamente a nuestro equipo por WhatsApp.</p>
                 </div>
-
                 <form id="quoteForm" class="space-y-6">
                     <div class="grid sm:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Categoría del Servicio</label>
-                            <select id="partType" class="w-full bg-brandDark border border-white/10 rounded-lg p-3.5 text-white focus:outline-none focus:border-brandRed">
-                                <option value="Piezas Mecánicas Cilíndricas (Ejes/Pernos/Bujes)">Piezas Mecánicas Cilíndricas</option>
-                                <option value="Formatos para Termoformadoras (Moldes)">Formatos para Termoformadora</option>
-                                <option value="Rotóres y Paletas para Bomba de Vacío">Rotóres y Paletas</option>
-                                <option value="Repuestos Especiales Handtmann">Repuestos Handtmann</option>
-                                <option value="Mantenimiento Preventivo / Correctivo de Planta">Mantenimiento de Planta</option>
-                            </select>
-                        </div>
-
-                        <div class="space-y-2">
-                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Material Estimado</label>
-                            <select id="materialType" class="w-full bg-brandDark border border-white/10 rounded-lg p-3.5 text-white focus:outline-none focus:border-brandRed">
-                                <option value="Acero Inoxidable (Grado Alimentario 304/316)">Acero Inoxidable (304 / 316)</option>
-                                <option value="Plásticos de Ingeniería Especiales (UHMW/Acetal)">Plástico Grado Alimentario</option>
-                                <option value="Acero de Herramienta de Alta Resistencia">Acero de Herramienta Templado</option>
-                                <option value="Asesoría Técnico Requerida para Elección">Requiero asesoría en la selección</option>
-                            </select>
-                        </div>
+                        <div class="space-y-2"> <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Tipo de Servicio</label> <select id="partType" class="w-full bg-[#161a22] border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-brandRed"> <option value="Piezas Mecánicas Cilíndricas CNC">Piezas Mecánicas Cilíndricas CNC</option> <option value="Moldes para Termoformadoras">Moldes para Termoformadoras</option> <option value="Rotores y Paletas de Precisión">Rotores y Paletas de Precisión</option> <option value="Repuesto Especial Handtmann">Repuesto Especial Handtmann</option> <option value="Mantenimiento o Automatización Industrial">Mantenimiento o Automatización Industrial</option> </select> </div>
+                        <div class="space-y-2"> <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Material Sugerido</label> <select id="materialType" class="w-full bg-[#161a22] border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-brandRed"> <option value="Acero Inoxidable Grado 304/316">Acero Inoxidable (Grado Alimenticio)</option> <option value="Plástico Grado Alimentario UHMW/Acetal">Plástico Grado Alimentario (UHMW)</option> <option value="Acero de Herramienta Templado">Acero de Herramienta Templado</option> <option value="Requiero Asesoría de Ingeniería">No estoy seguro (Requiero Asesoría)</option> </select> </div>
                     </div>
-
                     <div class="grid sm:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Cantidad Necesaria</label>
-                            <input type="number" id="partQuantity" value="1" min="1" class="w-full bg-brandDark border border-white/10 rounded-lg p-3.5 text-white focus:outline-none focus:border-brandRed">
-                        </div>
-
-                        <div class="space-y-2">
-                            <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Nombre o Empresa</label>
-                            <input type="text" id="clientName" placeholder="Ej: Planta Procesadora S.A." class="w-full bg-brandDark border border-white/10 rounded-lg p-3.5 text-white focus:outline-none focus:border-brandRed">
-                        </div>
+                        <div class="space-y-2"> <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Cantidad</label> <input type="number" id="partQuantity" value="1" min="1" class="w-full bg-[#161a22] border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-brandRed"> </div>
+                        <div class="space-y-2"> <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Tu Nombre / Empresa</label> <input type="text" id="clientName" placeholder="Ej: Planta Procesadora ABC" class="w-full bg-[#161a22] border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-brandRed"> </div>
                     </div>
-
-                    <div class="space-y-2">
-                        <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Especificaciones Adicionales / Comentarios</label>
-                        <textarea id="additionalDetails" rows="3" placeholder="Por favor mencione dimensiones aproximadas, referencia de la máquina o tipo de problema técnico..." class="w-full bg-brandDark border border-white/10 rounded-lg p-3.5 text-white focus:outline-none focus:border-brandRed"></textarea>
-                    </div>
-
-                    <button type="button" onclick="sendQuoteWhatsapp()" class="w-full bg-brandRed hover:bg-red-700 text-white font-extrabold py-4 rounded-lg uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:shadow-brandRed/30 flex items-center justify-center">
-                        <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Solicitar Asesoría de Ingeniería
-                    </button>
+                    <div class="space-y-2"> <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest">Detalles Adicionales / Referencias</label> <textarea id="additionalDetails" rows="3" placeholder="Por favor mencione dimensiones aproximadas, uso o referencia de la máquina (ej: Handtmann vf600)..." class="w-full bg-[#161a22] border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-brandRed"></textarea> </div>
+                    <button type="button" onclick="sendQuoteWhatsapp()" class="w-full bg-brandRed hover:bg-red-700 text-white font-extrabold py-4 rounded-lg uppercase tracking-wider transition-all hover:shadow-lg hover:shadow-brandRed/30 flex items-center justify-center"> <i class="fa-brands fa-whatsapp text-xl mr-2"></i> Solicitar Cotización de Ingeniería </button>
                 </form>
             </div>
         </div>
@@ -435,71 +222,51 @@
     <footer id="contacto" class="bg-brandDark border-t border-white/5 py-16 text-gray-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12">
             <div class="md:col-span-4 space-y-6">
-                <div class="w-44 h-12">
-                    <svg viewBox="0 0 180 65" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M 28 10 C 38 10, 42 18, 42 24 C 42 36, 18 36, 18 48 C 18 56, 26 58, 34 58 C 38 58, 41 56, 43 53" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-opacity="0.3"/>
-                        <circle cx="30"  cy="24" r="7" fill="#ffffff" fill-opacity="0.2" />
-                        <path d="M 40 22 C 38 14, 28 14, 26 22 C 24 32, 44 32, 42 46 C 41 52, 34 54, 28 53" fill="none" stroke="#e30613" stroke-width="5" stroke-linecap="round"/>
-                        <circle cx="30" cy="48" r="9" fill="#e30613" />
-                        <text x="54" y="31" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff">service</text>
-                        <text x="54" y="55" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="28" fill="#ffffff">telle <tspan fill="#e30613" font-weight="900">!</tspan></text>
+                <div class="w-40 h-12 flex items-center justify-center p-1">
+                    <svg viewBox="0 0 180 70" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(10,5)">
+                            <path d="M 32 12 C 40 12, 44 18, 44 24 C 44 32, 28 36, 16 40 C 6 44, 4 54, 12 58 C 18 61, 28 60, 36 56" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-opacity="0.3"/>
+                            <path d="M 36 12 C 28 12, 24 18, 24 24 C 24 32, 40 36, 52 40 C 62 44, 64 54, 56 58 C 50 61, 40 60, 32 56" fill="none" stroke="#e30613" stroke-width="6" stroke-linecap="round"/>
+                        </g>
+                        <text x="62" y="31" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff" letter-spacing="-0.5" fill-opacity="0.6">service</text>
+                        <text x="62" y="55" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="0.5">telle <tspan fill="#e30613" font-weight="900">!</tspan></text>
                     </svg>
                 </div>
-                <p class="text-sm text-gray-500">
-                    Desde 2009 brindamos soluciones de alta ingeniería para plantas de alimentos y el sector cárnico en toda América.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="https://www.instagram.com/servicestellesas_yolman_m/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-brandRed hover:text-white flex items-center justify-center text-gray-400 transition-all duration-300">
-                        <i class="fa-brands fa-instagram text-lg"></i>
-                    </a>
+                <p class="text-sm"> Soporte de ingeniería y mantenimiento especializado para la industria cárnica y alimentaria en Colombia. </p>
+                <div class="flex space-x-4 pt-2">
+                    <a href="https://www.instagram.com/servicestellesas_yolman_m/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-brandRed hover:text-white flex items-center justify-center text-gray-400 transition-all"> <i class="fa-brands fa-instagram text-lg"></i> </a>
+                    <a href="https://wa.me/573246820723" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#25D366] hover:text-white flex items-center justify-center text-gray-400 transition-all"> <i class="fa-brands fa-whatsapp text-lg"></i> </a>
                 </div>
             </div>
-
             <div class="md:col-span-4 space-y-6">
-                <h4 class="text-white font-bold text-sm uppercase tracking-widest">Ingeniería y Planta</h4>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest">Contacto Directo Planta</h4>
                 <ul class="space-y-4 text-sm">
-                    <li class="flex items-start space-x-3">
-                        <i class="fa-solid fa-phone text-brandRed mt-1"></i>
-                        <div>
-                            <p class="text-white font-semibold">(+57) 324 682 0723</p>
-                            <p class="text-xs text-gray-500">Línea de Ventas y Proyectos</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <i class="fa-solid fa-phone text-brandRed mt-1"></i>
-                        <div>
-                            <p class="text-white font-semibold">(+57) 317 300 4202</p>
-                            <p class="text-xs text-gray-500">Soporte y Emergencia Técnica</p>
-                        </div>
-                    </li>
+                    <li class="flex items-start space-x-3"> <i class="fa-solid fa-phone text-brandRed mt-1"></i> <div> <p class="text-white font-semibold">(+57) 324 682 0723</p> <p class="text-xs text-gray-500">Línea Ventas Ingeniería / Taller CNC</p> </div> </li>
+                    <li class="flex items-start space-x-3"> <i class="fa-solid fa-phone text-brandRed mt-1"></i> <div> <p class="text-white font-semibold">(+57) 317 300 4202</p> <p class="text-xs text-gray-500">Soporte Técnico Especializado Cárnico</p> </div> </li>
                 </ul>
             </div>
-
             <div class="md:col-span-4 space-y-6">
-                <h4 class="text-white font-bold text-sm uppercase tracking-widest font-montserrat">Especialidades</h4>
+                <h4 class="text-white font-bold text-sm uppercase tracking-widest font-montserrat">Nuestras Capacidades</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#mecanizado" class="hover:text-white transition-colors">Taller de Mecanizado Haas</a></li>
-                    <li><a href="#mecanizado" class="hover:text-white transition-colors">Formatos de Termoformadora</a></li>
-                    <li><a href="#mecanizado" class="hover:text-white transition-colors">Rotóres y Paletas a Medida</a></li>
-                    <li><a href="#mecanizado" class="hover:text-white transition-colors">Actualizaciones Eléctricas</a></li>
+                    <li>Mecanizado de Precisión CNC Haas vf4</li>
+                    <li>Restauración de Maquinaria RefurbPro</li>
+                    <li>Moldes Grado Alimenticio (HACCP)</li>
+                    <li>Suministro Especializado Handtmann</li>
                 </ul>
             </div>
         </div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-white/5 text-center text-xs text-gray-500">
-            <p>&copy; 2026 ServiceStelle S.A.S. Todos los derechos reservados. Soluciones profesionales de ingeniería de precisión para alimentos.</p>
+            <p>&copy; 2026 ServiceStelle S.A.S. Todos los derechos reservados. Soluciones profesionales de ingeniería de precisión cárdica.</p>
         </div>
     </footer>
 
     <div class="whatsapp-fixed fixed bottom-6 right-6 z-50 flex items-center">
         <div id="wa-tooltip" class="bg-white text-brandDark font-bold text-xs px-4 py-2.5 rounded-lg shadow-2xl mr-3 border-l-4 border-brandRed flex items-center space-x-2 transition-all duration-500 opacity-0 transform translate-x-10 pointer-events-none">
-            <span>¿Cualquier duda? Aquí estamos. ¡Escríbenos!</span>
+            <span>Cualquier duda aquí estamos. ¡Llevemos tu planta al siguiente nivel!</span>
             <button onclick="closeWaTooltip()" class="text-gray-400 hover:text-brandRed focus:outline-none"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        
-        <a href="https://wa.me/573246820723?text=Hola,%20solicito%20información%20acerca%20de%20los%20servicios%20de%20mantenimiento,%20venta%20y%20reparación%20de%20equipos%20industriales%20de%20ServiceStelle." 
-           target="_blank" 
-           rel="noopener noreferrer"
+        <a href="https://wa.me/573246820723?text=Hola,%20solicito%20información%20acerca%20de%20los%20servicios%20de%20ingeniería%20y%20repuestos%20de%20precisión%20de%20ServiceStelle." 
+           target="_blank" rel="noopener noreferrer"
            class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 relative">
             <i class="fa-brands fa-whatsapp"></i>
             <span class="absolute -top-1 -right-1 w-4 h-4 bg-brandRed rounded-full animate-ping"></span>
@@ -508,43 +275,16 @@
     </div>
 
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const tooltip = document.getElementById('wa-tooltip');
-                if(tooltip){
-                    tooltip.classList.remove('opacity-0', 'translate-x-10');
-                    tooltip.classList.add('opacity-100', 'translate-x-0');
-                }
-            }, 3000);
-        });
-
-        function closeWaTooltip() {
-            const tooltip = document.getElementById('wa-tooltip');
-            if(tooltip){
-                tooltip.classList.add('opacity-0', 'translate-x-10');
-            }
-        }
-
+        function toggleMobileMenu() { const menu = document.getElementById('mobile-menu'); menu.classList.toggle('hidden'); }
+        window.addEventListener('DOMContentLoaded', () => { setTimeout(() => { const tooltip = document.getElementById('wa-tooltip'); tooltip.classList.remove('opacity-0', 'translate-x-10'); tooltip.classList.add('opacity-100', 'translate-x-0'); }, 3000); });
+        function closeWaTooltip() { const tooltip = document.getElementById('wa-tooltip'); tooltip.classList.add('opacity-0', 'translate-x-10'); }
         function sendQuoteWhatsapp() {
             const partType = document.getElementById('partType').value;
             const materialType = document.getElementById('materialType').value;
             const partQuantity = document.getElementById('partQuantity').value;
             const clientName = document.getElementById('clientName').value || 'Cliente Interesado';
             const additionalDetails = document.getElementById('additionalDetails').value || 'Sin detalles adicionales.';
-
-            const message = `Hola ServiceStelle! Mi nombre/empresa es *${clientName}*.\n\n` +
-                            `Quiero consultar acerca de la siguiente solución:\n` +
-                            `• *Servicio:* ${partType}\n` +
-                            `• *Material:* ${materialType}\n` +
-                            `• *Cantidad:* ${partQuantity} unidades\n` +
-                            `• *Detalles:* ${additionalDetails}\n\n` +
-                            `Solicito asesoría técnica para coordinar este proyecto. ¡Muchas gracias!`;
-
+            const message = `Hola ServiceStelle!\nSoy *${clientName}*.\nQuiero cotizar:\n• *Servicio:* ${partType}\n• *Material:* ${materialType}\n• *Cantidad:* ${partQuantity}\n• *Detalles:* ${additionalDetails}\nEspero su asesoría técnica. ¡Gracias!`;
             const encodedMessage = encodeURIComponent(message);
             window.open(`https://wa.me/573246820723?text=${encodedMessage}`, '_blank');
         }
