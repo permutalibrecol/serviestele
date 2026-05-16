@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2 family=Montserrat:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -42,11 +42,14 @@
         .steel-border:hover {
             border: 1px solid rgba(227, 6, 19, 0.3);
         }
-        .gear-spin {
-            animation: spinGear 12s linear infinite;
+        /* Rotaciones de engranajes optimizadas para el nuevo logo vectorizado */
+        .gear-top-spin {
+            animation: spinGear 10s linear infinite;
+            transform-origin: 30px 24px;
         }
-        .gear-spin-reverse {
-            animation: spinGearRev 8s linear infinite;
+        .gear-bottom-spin {
+            animation: spinGearRev 7s linear infinite;
+            transform-origin: 30px 48px;
         }
         @keyframes spinGear {
             0% { transform: rotate(0deg); }
@@ -70,23 +73,33 @@
     <header class="fixed top-0 left-0 w-full z-50 bg-brandDark/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="relative w-12 h-12 flex items-center justify-center">
-                    <svg class="absolute w-10 h-10 text-brandRed gear-spin" viewBox="0 0 100 100" fill="currentColor">
-                        <path d="M50 35c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm0 24c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9z"/>
-                        <path d="M92 46.2l-8.5-1.4c-.4-1.5-1-3-1.8-4.4l5.1-7c.6-.8.5-2-.3-2.7l-5.7-5.7c-.8-.8-2-.8-2.7-.3l-7 5.1c-1.4-.8-2.9-1.4-4.4-1.8L65.3 12c-.2-.9-1-1.6-2-1.6H55c-1 0-1.8.7-2 1.6l-1.4 8.5c-1.5.4-3 1-4.4 1.8l-7-5.1c-.8-.6-2-.5-2.7.3l-5.7 5.7c-.8.8-.8 2-.3 2.7l5.1 7c-.8 1.4-1.4 2.9-1.8 4.4L20 46.2c-.9.2-1.6 1-1.6 2V55c0 1 .7 1.8 1.6 2l8.5 1.4c.4 1.5 1 3 1.8 4.4l-5.1 7c-.6.8-.5 2 .3 2.7l5.7 5.7c.8.8 2 .8 2.7.3l7-5.1c1.4.8 2.9 1.4 4.4 1.8L51.3 92c.2.9 1 1.6 2 1.6H61c1 0 1.8-.7 2-1.6l1.4-8.5c1.5-.4 3-1 4.4-1.8l7 5.1c.8.6 2 .5 2.7-.3l5.7-5.7c.8-.8.8-2 .3-2.7l-5.1-7c.8-1.4 1.4-2.9 1.8-4.4l8.5-1.4c.9-.2 1.6-1 1.6-2v-6.8c0-1-.7-1.8-1.6-2z"/>
+            <a href="#" class="flex items-center space-x-2 group">
+                <div class="w-48 h-16 flex items-center justify-center">
+                    <svg viewBox="0 0 180 65" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 52 14 A 23 23 0 0 1 82 56" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="2 2" />
+                        <path d="M 58 52 A 25 25 0 0 1 24 18" fill="none" stroke="#000000" stroke-width="1" stroke-opacity="0.3" />
+                        
+                        <g id="logo-gears">
+                            <path d="M 28 10 C 38 10, 42 18, 42 24 C 42 36, 18 36, 18 48 C 18 56, 26 58, 34 58 C 38 58, 41 56, 43 53" fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round"/>
+                            
+                            <g class="gear-top-spin">
+                                <circle cx="30"  cy="24" r="8" fill="#1a1a1a" />
+                                <circle cx="30"  cy="24" r="3" fill="#8c8c8c" />
+                                <path d="M 30 14 L 30 34 M 20 24 L 40 24 M 23 17 L 37 31 M 23 31 L 37 17" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" />
+                            </g>
+                            
+                            <path d="M 40 22 C 38 14, 28 14, 26 22 C 24 32, 44 32, 42 46 C 41 52, 34 54, 28 53" fill="none" stroke="#e30613" stroke-width="5" stroke-linecap="round"/>
+                            
+                            <g class="gear-bottom-spin">
+                                <circle cx="30" cy="48" r="10" fill="#e30613" />
+                                <circle cx="30" cy="48" r="3.5" fill="#e2e8f0" />
+                                <path d="M 30 36 L 30 60 M 18 48 L 42 48 M 21 39 L 39 57 M 21 57 L 39 39" stroke="#e30613" stroke-width="3" stroke-linecap="round" />
+                            </g>
+                        </g>
+                        
+                        <text x="54" y="31" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff" letter-spacing="-0.5">service</text>
+                        <text x="54" y="55" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="0.5">telle <tspan fill="#e30613" font-weight="900">!</tspan></text>
                     </svg>
-                    <svg class="absolute w-6 h-6 text-white gear-spin-reverse" style="top: 22px; left: 22px;" viewBox="0 0 100 100" fill="currentColor">
-                        <path d="M50 35c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z"/>
-                    </svg>
-                </div>
-                <div class="flex flex-col leading-none">
-                    <span class="text-white font-montserrat font-extrabold text-2xl tracking-tight group-hover:text-brandRed transition-colors">
-                        S<span class="text-xs font-semibold align-super">ervice</span>
-                    </span>
-                    <span class="text-brandRed font-montserrat font-black text-xl tracking-widest">
-                        TELLE<span class="text-white">!</span>
-                    </span>
                 </div>
             </a>
 
@@ -216,7 +229,7 @@
                     </h2>
                     <div class="w-20 h-1 bg-brandRed"></div>
                     <p class="text-gray-400">
-                        En <strong>ServiceStelle</strong> entendemos que en la industria cárnica y alimentaria cada minuto de inactividad cuesta dinero. Por eso, hemos estructurado un equipo de respuesta rápida y un taller de mecanizado propio para responder ante cualquier requerimiento.
+                        En <strong>ServiceStelle</strong> entendemos que en la industria cárnica y alimentaria cada minuto de inactividad cuesta dinero. Por eso, hemos estructura un equipo de respuesta rápida y un taller de mecanizado propio para responder ante cualquier requerimiento.
                     </p>
                     <p class="text-gray-400">
                         Diseñamos y fabricamos repuestos de alta precisión con tecnología <strong>CNC HAAS</strong>, asegurando una exactitud idéntica a las piezas originales. Atendemos requerimientos críticos de plantas en toda Colombia y América Latina.
@@ -422,9 +435,16 @@
     <footer id="contacto" class="bg-brandDark border-t border-white/5 py-16 text-gray-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-12">
             <div class="md:col-span-4 space-y-6">
-                <a href="#" class="flex items-center space-x-3">
-                    <span class="text-white font-montserrat font-black text-xl tracking-wider">SERVICESTELLE<span class="text-brandRed">!</span></span>
-                </a>
+                <div class="w-44 h-12">
+                    <svg viewBox="0 0 180 65" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 28 10 C 38 10, 42 18, 42 24 C 42 36, 18 36, 18 48 C 18 56, 26 58, 34 58 C 38 58, 41 56, 43 53" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-opacity="0.3"/>
+                        <circle cx="30"  cy="24" r="7" fill="#ffffff" fill-opacity="0.2" />
+                        <path d="M 40 22 C 38 14, 28 14, 26 22 C 24 32, 44 32, 42 46 C 41 52, 34 54, 28 53" fill="none" stroke="#e30613" stroke-width="5" stroke-linecap="round"/>
+                        <circle cx="30" cy="48" r="9" fill="#e30613" />
+                        <text x="54" y="31" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff">service</text>
+                        <text x="54" y="55" font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="28" fill="#ffffff">telle <tspan fill="#e30613" font-weight="900">!</tspan></text>
+                    </svg>
+                </div>
                 <p class="text-sm text-gray-500">
                     Desde 2009 brindamos soluciones de alta ingeniería para plantas de alimentos y el sector cárnico en toda América.
                 </p>
@@ -496,14 +516,18 @@
         window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const tooltip = document.getElementById('wa-tooltip');
-                tooltip.classList.remove('opacity-0', 'translate-x-10');
-                tooltip.classList.add('opacity-100', 'translate-x-0');
+                if(tooltip){
+                    tooltip.classList.remove('opacity-0', 'translate-x-10');
+                    tooltip.classList.add('opacity-100', 'translate-x-0');
+                }
             }, 3000);
         });
 
         function closeWaTooltip() {
             const tooltip = document.getElementById('wa-tooltip');
-            tooltip.classList.add('opacity-0', 'translate-x-10');
+            if(tooltip){
+                tooltip.classList.add('opacity-0', 'translate-x-10');
+            }
         }
 
         function sendQuoteWhatsapp() {
